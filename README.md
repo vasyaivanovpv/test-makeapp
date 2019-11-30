@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Сверстайте и сделайте интерактивной панель управления приложениями
 
-## Available Scripts
+## В общих чертах:
 
-In the project directory, you can run:
+1. Мы дадим вам JSON-файл с данными (apps.json в репозитории), а также папку с svg-иконками и папку со шрифтами (также в репозитории).
+2. На его основе согласно макетам в Adobe XD (https://xd.adobe.com/spec/b7c9b49d-36fd-4683-45af-6a1ed0dcb7d1-c1f8/) сверстайте рабочий стол приложения.
+3. Интерактивность должна проявляться в возможности фильтровать приложения в рамках активного рабочего стола в зависимости от нажатых тумблеров и выбранного количества звезд.
 
-### `yarn start`
+## Подробнее
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Это SPA, позволяющее собирать информацию о приложениях в одном месте. Для удобства пользователя интерфейс позволяет гибко отфильтровать приложения: по платформе (все, Android, iOS) и рейтингу.
+2. У пользователя есть несколько рабочих пространств. В рамках каждого из них есть собственный набор приложений из различных платформ с разным рейтингом. Предполагается, что пользователь прежде самостоятельно добавил приложения на рабочие столы (этот момент опущен). Кроме того, пользователь предварительно создал несколько рабочих столов, по которым распределил приложения.
+3. **Суть задания**: точно сверстать и сделать интерактивным интерфейс выбора приложений. Интерфейс должен помнить состояние, пока не перезагружена страница. При перезагрузке страницы состояние теряется.
+4. Возможные действия в интерфейсе:
+   1. Отфильтровать приложения по платформе
+   2. Отфильтровать приложения по рейтингу
+   3. Переключить рабочие столы (с сохранением настроек рабочего стола)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Дополнительно
 
-### `yarn test`
+1. Будет плюсом, если вы сделаете так, чтобы интерфейс сохранял своё состояние между перезагрузками страницы.
+2. Будет плюсом, если рабочий стол можно будет открыть, перейдя по ссылке, содержащей код рабочего стола (например, `tinkoff`).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Требования
 
-### `yarn build`
+1. Если пользователь переключится с одного рабочего стола на другой, а потом вернулся обратно, настройки рабочего стола должны сохраниться.
+2. Состояние рабочего стола по умолчанию: фильтр платформы приложения установлен на "все", а селектор звезд на "Выбрать" (пустое значение). Данные берутся из apps.json.
+3. У иконок приложения должен быть Lazyload.
+4. Названия приложений могут быть длинными. Их нужно обрезать до двух строк с многоточием на конце, если они вылезают за пределы двух строк.
+5. Количество установок приложения необходимо округлять собственными силами. Если больше 1000, то до "1k", если больше миллиона, то "1kk". Важно округлять, учитывая, что 0.49999 округляется до нуля, а 0.5 уже до единицы.
+6. Не важно, как вы организуете сборку приложения (Webpack с кастомным конфигом или что-то другое).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Кроссбраузерность
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Необходимо поддерживать последние версии всех браузеров кроме IE и Edge. (Safari, Chrome, Firefox)
