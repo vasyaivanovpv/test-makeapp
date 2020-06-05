@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/test-makeapp/static/css/main.fb62e704.chunk.css",
+    "main.js": "/test-makeapp/static/js/main.916f454c.chunk.js",
+    "main.js.map": "/test-makeapp/static/js/main.916f454c.chunk.js.map",
+    "runtime-main.js": "/test-makeapp/static/js/runtime-main.6cb0f18e.js",
+    "runtime-main.js.map": "/test-makeapp/static/js/runtime-main.6cb0f18e.js.map",
+    "static/js/2.e5e16aef.chunk.js": "/test-makeapp/static/js/2.e5e16aef.chunk.js",
+    "static/js/2.e5e16aef.chunk.js.map": "/test-makeapp/static/js/2.e5e16aef.chunk.js.map",
+    "index.html": "/test-makeapp/index.html",
+    "precache-manifest.e34dbd0d2ae71c805da883144e24225e.js": "/test-makeapp/precache-manifest.e34dbd0d2ae71c805da883144e24225e.js",
+    "service-worker.js": "/test-makeapp/service-worker.js",
+    "static/css/main.fb62e704.chunk.css.map": "/test-makeapp/static/css/main.fb62e704.chunk.css.map",
+    "static/media/fonts.css": "/test-makeapp/static/media/MuseoSansCyrl-900.3b1501e4.ttf",
+    "static/media/svg_android.1c77cd6d.svg": "/test-makeapp/static/media/svg_android.1c77cd6d.svg",
+    "static/media/svg_apple.528096b9.svg": "/test-makeapp/static/media/svg_apple.528096b9.svg",
+    "static/media/svg_mark.189b9cff.svg": "/test-makeapp/static/media/svg_mark.189b9cff.svg",
+    "static/media/svg_star.9c2818ab.svg": "/test-makeapp/static/media/svg_star.9c2818ab.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cb0f18e.js",
+    "static/js/2.e5e16aef.chunk.js",
+    "static/css/main.fb62e704.chunk.css",
+    "static/js/main.916f454c.chunk.js"
+  ]
+}
